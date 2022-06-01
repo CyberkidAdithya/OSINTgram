@@ -22,7 +22,6 @@ from src import config
 
 class Osintgram:
     api = None
-    api2 = None
     geolocator = Nominatim(user_agent="http")
     user_id = None
     target_id = None
