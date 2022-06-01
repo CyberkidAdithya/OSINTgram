@@ -1099,7 +1099,7 @@ class Osintgram:
             settings_file = "config/settings.json"
             if not os.path.isfile(settings_file):
                 # settings file does not exist
-                print(f'Unable to find file: {settings_file!s}')
+                print('Unable to find file: {}'.format(settings_file))
 
                 # login new
                 self.api = AppClient(auto_patch=True, authenticate=True, username=u, password=p,
@@ -1117,7 +1117,7 @@ class Osintgram:
                     on_login=lambda x: self.onlogin_callback(x, settings_file))
 
         except (ClientCookieExpiredError, ClientLoginRequiredError) as e:
-            print(f'ClientCookieExpiredError/ClientLoginRequiredError: {e!s}')
+            print('ClientCookieExpiredError/ClientLoginRequiredError: {}'.format(e))
 
             # Login expired
             # Do relogin but use default ua, keys and such

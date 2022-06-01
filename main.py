@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from src.Osintgram import Osintgram
+from Osintgram import Osintgram
 import argparse
 from src import printcolors as pc
 from src import artwork
